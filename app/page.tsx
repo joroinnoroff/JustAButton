@@ -11,20 +11,23 @@ import Complete from '@/components/Complete';
 const App = () => {
   const [state, setState] = useState(false);
   const [cat, setCat] = useState('');
-  const [done, setDone] = useState(undefined);
+  const [done, setDone] = useState(false);
 
   useEffect (() => {
     getCat ();
     }, []);
 
     const getCat = () => {
-      setDone(undefined);
+      setDone(false);
       setTimeout(() => {
         fetch('https://dog.ceo/api/breeds/image/random')
         .then(res => res.json())
         .then(data => {
-          setCat(data.message); // Extract the image URL from the response
-          setDone(true);
+          setCat(data.message); 
+          
+setDone(true);
+
+
 
 
         
