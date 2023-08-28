@@ -23,7 +23,7 @@ const Complete: React.FC<CompleteProps> = ({ onPlay }) => {
 
   return (
     <div onClick={handleAnimationClick}>
-      <Lottie animationData={confettiAnimation} play={false} loop={false} ref={animationRef} />
+      <Lottie animationData={confettiAnimation} loop={false} ref={animationRef} />
     </div>
   );
 };
